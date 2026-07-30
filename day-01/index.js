@@ -35,8 +35,9 @@ ES Modules (import, export)
 */
 
 fs.writeFile("./info.txt","hello ajit", () => { })
-// reading a file:=
 
+// reading a file:=
 const read = fs.readFileSync("./info.txt",'utf-8')
 console.log(read);
 
+fs.
