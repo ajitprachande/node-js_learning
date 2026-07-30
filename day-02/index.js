@@ -12,7 +12,7 @@ console.log(content);
 
 // create dir  
 // fs.mkdirSync("Dir");
-// fs.mkdirSync("Codes/ui", { recursive: true});
+fs.mkdirSync("Codes/ui", { recursive: true});
 
 // remove dir
 // fs.rmdirSync("Dir")
