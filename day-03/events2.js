@@ -2,7 +2,7 @@ const EventEmitter = require('node:events')
 
 const eventEmitter = new EventEmitter();
 
-// removeAllListener() 
+//6. removeAllListener() 
 
 eventEmitter.on("home", (name) => {
     console.log("Home page", name);

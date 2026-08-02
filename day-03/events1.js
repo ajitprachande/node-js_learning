@@ -81,7 +81,7 @@ chat.emit("message","hello how are you???");
 chat.on('message',receiveMessage);
 chat.off('message',receiveMessage);
 
-// removeAllListener() 
+//5. removeAllListener() 
 
 eventEmitter.on("home", () => {
     console.log("Home page");

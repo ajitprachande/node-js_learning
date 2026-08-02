@@ -2,6 +2,7 @@ const EventEmitter = require('node:events')
 
 const eventEmitter = new EventEmitter()
 
+//7. listeners() 
 function Greet(name) {
     console.log(`Hello ${name}`);
 }
