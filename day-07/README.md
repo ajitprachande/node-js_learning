@@ -61,18 +61,25 @@ Example:
 An HTTP request generally contains the following:
 
 1. **Method** (`GET`, `POST`, `PUT`, `PATCH`, `DELETE`, `HEAD`)
-   → It tells the server what action the client wants to perform.
+    + It tells the server what action the client wants to perform.
 
-   `GET` requests a representation of a resource from the server.
-    `POST` submits data to the server, commonly to create a new resource or trigger processing. 
-    - ("Create/process a new user using the data I'm sending.")
+    1. **GET** 
+         + `GET` requests a representation of a resource from the server.
+    2. **POST**
+        + `POST` submits data to the server, commonly to create a new resource or trigger processing. 
+        + ("Create/process a new user using the data I'm sending.")
 
-    `PUT` is generally used to completely replace the representation of a resource. ("Replace the resource.")
-    `PATCH` is used to partially modify an existing resource.   ("Modify part of the resource.")
-    `DELETE` requests that a resource be removed.
-    `HEAD` is like GET, but the server returns the response headers without the response body.
-    `OPTIONS` asks the server what communication options are available for a target resource.   
-       - Allow: GET, POST, OPTIONS  : (This tells the client which methods are supported.)
+    3. **PUT** 
+        + `PUT` is generally used to completely replace the representation of a resource. ("Replace the resource.")
+    4. **PATCH** 
+        + `PATCH` is used to partially modify an existing resource.   ("Modify part of the resource.")
+    5. **DELETE**
+        + `DELETE` requests that a resource be removed.
+    6. **HEAD** 
+        + `HEAD` is like GET, but the server returns the response headers without the response body.
+    7. **OPTIONS** 
+       + `OPTIONS` asks the server what communication options are available for a target resource.   
+       + Allow: GET, POST, OPTIONS  : (This tells the client which methods are supported.)
 
 2. **URL / Path**
    + It identifies the resource that the client wants to access.
@@ -123,7 +130,7 @@ Build a simple HTTP server with the following features:
 
 ---
 
-### Learnins:  
+### Learnings:  
 + Understand why do we need HTTP.
 + HTTP communication flow
 + Request - Response lifecycle
