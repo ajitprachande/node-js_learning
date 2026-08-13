@@ -1,5 +1,5 @@
 ### Task: Setting Up the Server with Express, Listening on Port 8000, and Creating Book Routes
-## (index.js file)
+**[View `index.js` file](./index.js)**
 ---
 #### Step 1: Project Initialization
 
