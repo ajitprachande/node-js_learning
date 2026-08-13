@@ -71,8 +71,7 @@ This step-by-step breakdown will guide your students through setting up and test
 managing a collection of books. Let me know if you'd like to add any advanced steps!
 
 ## Features of Express
-    ```
-        Robust routing
+    ```Robust routing
         Focus on high performance
         Super-high test coverage
         HTTP helpers (redirection, caching, etc)
