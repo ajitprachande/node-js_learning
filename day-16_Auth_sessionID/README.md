@@ -2,21 +2,21 @@
 ## creating end-to-end authentication (session based auth).
 ---
 -   `pnpm` package manager. 
-1. Entry Point `(index.js)`
+## 1. Entry Point `(index.js)`
 - application starts by initializing express server.
 - loads env variables like `PORT` using 'dotenv'
   
-2. Routing `(routes/user.routes.js)`
+## 2. Routing `(routes/user.routes.js)`
 
 -This file defines four main API endpoints:
 
-`POST /signup`:  route to register a new user.
-`POST /login`:  route to authenticate a user and generate a session.
-`GET /profile`: Protected route (uses isLoggedin middleware) to fetch user details.
-`PATCH /profile`: Protected route to update the user's name. 
+- `POST /signup`:  route to register a new user.
+- `POST /login`:  route to authenticate a user and generate a session.
+- `GET /profile`: Protected route (uses isLoggedin middleware) to fetch user details.
+- `PATCH /profile`: Protected route to update the user's name. 
 
-3. Controllers `(controllers/user.controller.js)`
-Contains the core business logic for the routes:
+## 3. Controllers `(controllers/user.controller.js)`
+- Contains the core business logic for the routes:
    
 `signup`: 
 - Validates input, checks if the email is already registered,
@@ -32,13 +32,12 @@ Contains the core business logic for the routes:
 
 `UpdateName`: Takes the new name from the request body and updates the user's record in the database using the user ID from the authenticated session.
 
-
-4. Authentication Middleware `(middleware/user.sessionAuth.js)`
+## 4. Authentication Middleware `(middleware/user.sessionAuth.js)`
 - `isLoggedin`: Extracts the session-id from the HTTP headers.
 - If a session ID is present, it performs a database query (joining the `userSessions` table with the `userTable`) to verify the session is valid and to fetch the user's information.
 
 
-5. Database & ORM `(db/index.js & db/schema.js)`
+## 5. Database & ORM `(db/index.js & db/schema.js)`
 - The app uses Drizzle ORM configured for PostgreSQL.
 - `index.js` establishes the database connection.
 - `schema.js`defines the structure of the data
@@ -46,20 +45,20 @@ Contains the core business logic for the routes:
 - `userSessions`: A table specifically for managing active sessions. 
 
 ---
-### What is a Docker volume?**
+### What is a Docker volume? 
 - Persistent storage managed by Docker that allows data to survive beyond the lifetime of a container.
 - Think of it like an `external hard disk` for your container.
     ```EX:
             volumes:
-            - db_data:/var/lib/postgresql/db_data
+             - db_data:/var/lib/postgresql/db_data
         volumes:
             db_data:
     ```
-        db_data =>                      Docker volume
-        - /var/lib/postgresql/db_data => Location INSIDE the container
+        db_data                       =>  Docker volume
+        - /var/lib/postgresql/db_data =>  Location INSIDE the container
 - It means:
-    **Mount the Docker volume named db_data at /var/lib/postgresql/db_data inside this container.**
-    **Docker, please create/manage a volume named db_data.**
+    **Mount the Docker volume named db_data at `/var/lib/postgresql/db_data` inside this container.**
+    **Docker, create/manage a volume named db_data.**
 ---
 
 ### Session-Based Authentication
