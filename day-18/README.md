@@ -1,17 +1,21 @@
 ###
 - Introduction of MongoDb, MongoDB Atlas setup
-- 
+- in this day-18 learning, all controller code i used inside `Routes Dir`.
+- implemented image upload using multer 
 
 ## Routes
+**User Route**
 - POST - `/user/signup`  User Registration
 - POST - `/user/login`  User Login
 - GET - `/user/profile` get user profile (jwt token auth required).
 - PATCH - `/user/update`  update user name
+- POST - `/uploadimg` user can upload image in disk storage(working folder)
 ---
+**Admin Route (update admin in MongoDb atlas studio)**
 - GET -  `/admin/alluser` - get all user data
 - GET -  `/admin/user/:id` - get user by id
 
-### file upload using multer
+### file/image upload using multer
 
 - Install Multer
 - `pnpm add multer`
