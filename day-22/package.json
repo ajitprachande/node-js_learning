@@ -1,0 +1,21 @@
+{
+  "name": "node-distroless-demo-app",
+  "version": "1.0.0",
+  "description": "multi-stage docker build for nodejs using distroless image",
+  "license": "ISC",
+  "author": "ajitprachande",
+  "type": "module",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "dotenv": "^18.0.7",
+    "express": "^5.3.0"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/node": "^26.6.5"
+  }
+}
